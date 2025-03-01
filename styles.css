@@ -1,52 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+
+.row {
+    width: 100%;
 }
-.box {
+.section {
     position: relative;
-    width: 30%;
-    margin: 10px;
-    padding: 40px 20px 20px; 
-    border: 1px solid #000;
-    background-color: #b3b3b3;
-} 
+    background-color: #999999;
+    border: 1px solid black;
+    margin: 15px;
+    padding: 40px 15px 15px 15px;
+}
+
 .title {
-    font-size: 1.25em;
-    font-weight: bold;
-    color: black;
-    padding: 5px 10px;
     position: absolute;
     top: 0;
     right: 0;
-    width: 120px; /* Sabit genişlik */
+    width: 120px;
+    text-align: center;
     border: 1px solid black;
     border-top: none;
     border-right: none;
+    padding: 5px;
+    font-weight: bold;
 }
-.chicken .title {
-    background-color: #e89880;
+
+.title-chicken {
+    background-color: #D59898;
 }
-.beef .title {
-    background-color: #d9534f;
+
+.title-beef {
+    background-color: #C14543; 
+    color: white;
 }
-.sushi .title {
-    background-color: #f0ad4e;
+
+.title-sushi {
+    background-color: #E5D198;
+}
+
+p {
+    clear: right;
+}
+@media (min-width: 992px) {
+    .col-lg-4 {
+        float: left;
+        width: 33.33%;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    .box {
-        width: 45%;
+    .col-md-6 {
+        float: left;
+        width: 50%;
     }
-    .box:nth-child(3) {
-        width: 92%;
+    .col-md-12 {
+        float: left;
+        width: 100%;
     }
 }
 @media (max-width: 767px) {
-    .box {
-        width: 90%;
+    .col-sm-12 {
+        float: left;
+        width: 100%;
     }
 }
